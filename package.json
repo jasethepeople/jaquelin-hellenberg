@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@xyflow/react": "^12.10.0",
+    "lucide-react": "^0.563.0",
+    "mermaid": "^11.12.2",
+    "reactflow": "^11.11.4",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}
