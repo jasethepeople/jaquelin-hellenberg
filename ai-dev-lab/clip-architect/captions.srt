@@ -1,0 +1,4 @@
+1
+00:00:10,500 --> 00:00:45,000
+Mock analysis: High value segment detected.
+

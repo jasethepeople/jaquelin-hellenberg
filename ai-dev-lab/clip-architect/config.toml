@@ -1,0 +1,17 @@
+[general]
+dry_run = true
+output_format = "DaVinciResolve"
+
+[style.tiktok]
+font_name = "Arial"
+font_size = 24
+primary_color = "&H00FFFFFF" # White
+outline_color = "&H00000000" # Black
+alignment = 2                # Bottom Center
+
+[style.reels]
+font_name = "Verdana"
+font_size = 20
+primary_color = "&H0000FFFF" # Yellow
+outline_color = "&H00000000"
+alignment = 5                # Middle Center
