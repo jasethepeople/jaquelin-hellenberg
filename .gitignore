@@ -2,3 +2,7 @@ node_modules
 
 .cursor/hooks.json
 .cursor/hooks/after-agent-response.js
+.aider*
+target/
+.aider*
+*.onnx
