@@ -6,3 +6,24 @@ node_modules
 target/
 .aider*
 *.onnx
+/target/
+**/*.rs.bk
+# Package Manager Artifacts
+node_modules/
+package-lock.json
+
+# OS/System folders
+snap/
+.cache/
+.local/
+
+# Large Binaries and Archives
+*.zip
+*.tar.xz
+*.img
+*.gpg
+*.mf
+
+# App Specific Build Folders
+tauri_app01/src-tauri/target/
+zig-linux-x86_64-*/
