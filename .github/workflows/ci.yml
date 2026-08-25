@@ -1,0 +1,41 @@
+name: CI Build & Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # Setup Node.js
+    - uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    # Install pnpm
+    - name: Install pnpm
+      uses: pnpm/action-setup@v4
+      with:
+        version: 8
+
+    # Install dependencies (skip approval to avoid interactive prompt)
+    - name: Install dependencies
+      run: pnpm install --no-frozen-lockfile
+
+    # Approve build scripts automatically (needed for esbuild)
+    - name: Approve build scripts
+      run: pnpm approve-builds --yes
+
+    # Build the monorepo
+    - name: Build all packages
+      run: pnpm -r run build
+
+    # Run the test suite
+    - name: Run tests
+      run: pnpm test
